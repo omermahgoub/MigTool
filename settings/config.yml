@@ -1,0 +1,23 @@
+OpenStack:
+    #host: http://labstack.stcas.com.sa:5000/v2.0
+    #host: http://172.18.112.2:5000/v2.0
+    host: http://172.16.0.3:5000/v2.0
+    user: admin
+    passwd: admin
+    tenantName: admin
+rabbitMQ:
+    host: localhost
+    user: admin
+    passwd: admin
+QueueSettings:
+    retryCount: 10
+    ProjectQueueName: Project_Queue
+    UserQueueName: User_Queue
+    VMQueueName: VM_Queue
+    UpgradeQueueName: Upgrade_Queue
+    ResizeQueueName: Resize_Queue
+    MuranoQueueName: Murano_Queue
+    AddonQueueName: Addon_Queue
+    UnSubscribeQueueName: UnSubscribe_Queue
+UserSettings:
+    DefaultUserPassword: admin
