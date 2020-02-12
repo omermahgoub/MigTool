@@ -1,14 +1,13 @@
 OpenStack:
-    #host: http://labstack.stcas.com.sa:5000/v2.0
-    #host: http://172.18.112.2:5000/v2.0
-    host: http://172.16.0.3:5000/v2.0
+
+    host: http://:5000/v2.0
     user: admin
-    passwd: admin
-    tenantName: admin
+    passwd: 
+    tenantName: 
 rabbitMQ:
     host: localhost
-    user: admin
-    passwd: admin
+    user: 
+    passwd: 
 QueueSettings:
     retryCount: 10
     ProjectQueueName: Project_Queue
@@ -20,4 +19,4 @@ QueueSettings:
     AddonQueueName: Addon_Queue
     UnSubscribeQueueName: UnSubscribe_Queue
 UserSettings:
-    DefaultUserPassword: admin
+    DefaultUserPassword: 
