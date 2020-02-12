@@ -9,8 +9,8 @@ start_date = "2014-11-19T00:00:00"
 end_date = "2014-11-19T23:00:00"
 
 keystone = dict(os_username='admin',
-                os_password='AwalNet@123',
-                os_auth_url='http://172.18.112.2:5000/v2.0',
+                os_password='',
+                os_auth_url='http:/:5000/v2.0',
                 os_tenant_name='StatsProject')
 
 ceilometer = client.get_client(2, **keystone)
