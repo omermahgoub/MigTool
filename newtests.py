@@ -19,8 +19,8 @@ class OpenStackAdapterProjects(object):
         """
         if service.lower() in ("keystone", "neutron"):
             creds = {'auth_url': '', 'username': '', 'password': '', 'tenant_name': ''};
-            # creds['auth_url'] = "http://172.18.112.2:5000/v2.0"
-            creds['auth_url'] = "http://cloudbeta.stcs.com.sa:5000/v2.0"
+            # creds['auth_url'] = "http:///v2.0"
+            creds['auth_url'] = "http:5000/v2.0"
             creds['username'] = ""
             creds['password'] = ""
             creds['tenant_name'] = ""
@@ -29,7 +29,7 @@ class OpenStackAdapterProjects(object):
             creds = {'username': '', 'api_key': '', 'auth_url': '', 'project_id': ''};
             creds['username'] = ""
             creds['api_key'] = ""
-            creds['auth_url'] = "http://cloudbeta.stcs.com.sa:5000/v2.0"
+            creds['auth_url'] = "http://.:5000/v2.0"
             creds['project_id'] = projectname
             # creds['service_type'] = ""
             return creds
