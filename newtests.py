@@ -21,24 +21,24 @@ class OpenStackAdapterProjects(object):
             creds = {'auth_url': '', 'username': '', 'password': '', 'tenant_name': ''};
             # creds['auth_url'] = "http://172.18.112.2:5000/v2.0"
             creds['auth_url'] = "http://cloudbeta.stcs.com.sa:5000/v2.0"
-            creds['username'] = "admin"
-            creds['password'] = "admin123"
-            creds['tenant_name'] = "admin"
+            creds['username'] = ""
+            creds['password'] = ""
+            creds['tenant_name'] = ""
             return creds
         elif service.lower() in ("nova", "cinder"):
             creds = {'username': '', 'api_key': '', 'auth_url': '', 'project_id': ''};
-            creds['username'] = "mzubair"
-            creds['api_key'] = "test1234"
+            creds['username'] = ""
+            creds['api_key'] = ""
             creds['auth_url'] = "http://cloudbeta.stcs.com.sa:5000/v2.0"
             creds['project_id'] = projectname
-            # creds['service_type'] = "admin"
+            # creds['service_type'] = ""
             return creds
             #
 
-    kcreds = get_credentials("keystone", "admin")
+    kcreds = get_credentials("keystone", "")
     _objkeystone = ksclient.Client(**kcreds)
 
-    novacreds = get_credentials("nova", "Mohammad82")
+    novacreds = get_credentials("nova", "")
     _objnova = nvclient.Client(**novacreds)
 
     def Project_Availability(self, ProjectName):
@@ -93,7 +93,7 @@ class OpenStackAdapterProjects(object):
 
             print "printing from Assign Function %s" % UserId
 
-            superUser = self.get_user_id("mzubair")
+            superUser = self.get_user_id("")
 
             print "Printing Admin & User Info", superUser, UserId
 
@@ -171,7 +171,7 @@ class OpenStackAdapterProjects(object):
         tenants = self._objkeystone.tenants.list()
         my_tenant = [x for x in tenants if x.name=='Mohammad2209'][0]
 
-        user_id = self.get_user_id('mzubair')
+        user_id = self.get_user_id('')
         my_user = self._objkeystone.users.get(user_id)
 
         role_id = self.GetRole('admin')
